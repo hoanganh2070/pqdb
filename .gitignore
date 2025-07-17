@@ -1,0 +1,42 @@
+# Go workspace (Gopath)
+# Đảm bảo loại trừ thư mục chứa mã nguồn Go khi sử dụng workspace truyền thống (GOPATH)
+# Điều này không còn cần thiết nếu bạn sử dụng Go Modules.
+# Go sẽ không thêm các thư mục `bin/` hoặc `pkg/` vào source code.
+
+# Binaries
+/bin/
+/pkg/
+
+# Go Modules (Kể cả với Go Modules mới thì vẫn giữ)
+# Bạn có thể cần thêm tệp go.sum vào Git nếu sử dụng Go Modules
+go.sum
+go.mod
+
+# Thư mục build
+build/
+
+# Các tệp tin biên dịch
+*.exe
+*.out
+*.test
+*.so
+*.a
+*.prof
+
+# Thư mục tạm thời của IDE (Visual Studio Code, GoLand...)
+.vscode/
+.idea/
+
+# Tệp tin tạm thời của hệ thống
+.DS_Store
+Thumbs.db
+
+# Các tệp log
+*.log
+
+# Các tệp tin cache
+.cache/
+*.swp
+
+# Các tệp backup của editor
+*~
