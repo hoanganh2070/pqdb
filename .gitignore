@@ -10,7 +10,6 @@
 # Go Modules (Kể cả với Go Modules mới thì vẫn giữ)
 # Bạn có thể cần thêm tệp go.sum vào Git nếu sử dụng Go Modules
 go.sum
-go.mod
 
 # Thư mục build
 build/

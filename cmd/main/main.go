@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hoanganh2070/pqdb/internal"
+	"github.com/hoanganh2070/pqdb/internal/db"
 )
 
 func main() {
-	dal, err := internal.NewDataAccessLayer("test.db", os.Getpagesize())
+	dal, err := db.NewDataAccessLayer("test.db", os.Getpagesize())
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error initializing DataAccessLayer: %v\n", err)
 		return
@@ -23,7 +23,7 @@ func main() {
 
 	dal.Close()
 
-	dal, _ = internal.NewDataAccessLayer("test.db", os.Getpagesize())
+	dal, _ = db.NewDataAccessLayer("test.db", os.Getpagesize())
 
 	p = dal.AllocateEmptyPage()
 	p.Num = dal.GetNextPage()
